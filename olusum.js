@@ -29,6 +29,21 @@ function ekleUI (deger2) {
     liste.appendChild(div1);
 
 }
+function ekleUI1 (deger2) {
+    const i = document.createElement("i");
+    i.className = "fa-solid fa-xmark";
+    let div = document.createElement("div");
+    div.className = "card-body";
+    div.textContent = deger2;
+    deger.value = "";
+    let div1 = document.createElement("div");
+    let liste = document.querySelector("#list");
+    div1.className = "card";
+    div.appendChild(i);
+    div1.appendChild(div);
+    liste.appendChild(div1);
+
+}
 function silme (e) {
     if(e.target.className === "fa-solid fa-xmark") {
         let liste2 = e.target.parentElement.parentElement;
@@ -79,7 +94,7 @@ function pageL() {
     let a = 0;
     while(a<deger15.length) {
         let deger16 = deger15[a];
-        ekleUI(deger16);
+        ekleUI1(deger16);
         a++;
     }
 }
